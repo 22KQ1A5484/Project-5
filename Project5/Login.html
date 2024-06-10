@@ -1,0 +1,58 @@
+<html>
+    <head>
+       <title>login Form</title>
+    </head>
+    <style>
+        h3{         
+         text-shadow: 5px 5px 10px red;
+        }
+        .content{
+        position: relative;
+        z-index: 1;
+        margin: auto;
+        margin-top: 300px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        height: 200px;
+        width: 200px;
+        background: rgb(0,0,0,0.5);
+        border-radius: 20px;
+    }
+   </style>
+    <script>
+        // User Validations
+function loginValidation() {
+            // Ramesh
+  var uname = document.myform.username.value;
+             //Ramesh@123
+  var password = document.myform.password.value;
+            if(uname==null || uname=="") {
+              alert("Name cant be blank")
+              return false;  
+           } else if (password.length<6){
+              alert("Password Must be 6 letters")
+              return false;
+           }  
+           return true;                 
+        }           
+     </script>
+    <style>
+        body{
+            background-image: url(CS6.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+     <body>      
+      <div class="content">
+      <h3>Login Page</h3>
+      <form name="myform" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)">
+        User Name : <input type="text" name="username"> <br>
+        Password :  <input type="password" name="password"> <br>
+                 <input type="submit" value="Login">
+                 <a href="ClothingStore.html"><input type="button" value="Exit"></a>
+      </div>
+    </form>
+     </body>
+ </html>
